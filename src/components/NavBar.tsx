@@ -19,7 +19,7 @@ export default function NavBar({ favCountries }: Prop) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div">
-            MUI
+            World
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />

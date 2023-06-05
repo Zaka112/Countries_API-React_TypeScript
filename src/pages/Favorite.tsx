@@ -9,8 +9,8 @@ type Prop = {
 export default function Favorite({ favCountries }: Prop) {
   return (
     <div>
-      <Typography variant="h2" component="h1">
-        Favorite Country
+      <Typography variant="h2" component="h1" sx={{textAlign:"center", fontWeight:800}}>
+        Favorite Countries
       </Typography>
 
       {favCountries.map((favItem) => {

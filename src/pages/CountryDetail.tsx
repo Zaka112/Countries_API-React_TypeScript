@@ -15,6 +15,7 @@ import { red } from "@mui/material/colors";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { CountryListType } from "../types/types";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
+import { Box } from "@mui/material";
 //import { Link } from "@mui/material";
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -51,7 +52,8 @@ export default function CountryDetails() {
     <div>
       {country.map((countryItem) => {
         return (
-          <Card sx={{ maxWidth: 300 }}>
+          <Box sx={{ margin:15 , marginTop: 5}}>
+          <Card sx={{ maxWidth: 300  }}>
             <CardHeader
               avatar={
                 <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -91,7 +93,7 @@ export default function CountryDetails() {
                 </Typography>
               </CardContent>
             </Collapse>
-          </Card>
+          </Card></Box>
         );
       })}
     </div>
