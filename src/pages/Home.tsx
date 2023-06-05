@@ -14,7 +14,7 @@ export default function Home() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          marginTop: 3,
+         
           minHeight: 800,
           alignContent: "center",
         }}

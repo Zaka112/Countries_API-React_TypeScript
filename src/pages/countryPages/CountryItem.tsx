@@ -6,6 +6,7 @@ import TablePaginationActions from "@mui/material/TablePagination/TablePaginatio
 import TableHeading from "../../components/countryTableComponents/TableHeading";
 import TablesBody from "../../components/countryTableComponents/TablesBody";
 import { CountryListType } from "../../types/types";
+import background from "../../assets/world.jpg"
 
 type Prop = {
   favCountries: CountryListType[];
@@ -42,7 +43,7 @@ export default function CountryItem({
   };
 
   return (
-    <Paper sx={{ width: "100%", overflow: "hidden" }}>
+    <Paper sx={{ width: "100%", overflow: "hidden",  backgroundImage: `url(${background})` }}>
       <TableContainer>
         <Table>
           <TableHeading />

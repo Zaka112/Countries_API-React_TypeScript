@@ -17,6 +17,8 @@ import AddLocationIcon from "@mui/icons-material/AddLocation";
 import { Box, CircularProgress } from "@mui/material";
 
 import { CountryListType } from "../../types/types";
+import background from "../../assets/world.jpg";
+
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -65,7 +67,7 @@ export default function CountryDetails() {
     <div>
       {country.map((countryItem) => {
         return (
-        <Box key={countryItem.name.common}  sx={{ margin: 15, marginTop: 5 }}>
+        <Box  key={countryItem.name.common}  sx={{ margin: 15, marginTop: 5, backgroundImage:`url(${background})` }}>
             <Card sx={{ maxWidth: 300 }}>
               <CardHeader
                 avatar={

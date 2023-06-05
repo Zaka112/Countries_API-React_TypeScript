@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Box, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 
 import { CountryListType } from "../../types/types";
+import background from "../../assets/world.jpg"
 
 type Prop = {
   favCountries: CountryListType[];
@@ -10,7 +11,18 @@ type Prop = {
 
 export default function Favorite({ favCountries }: Prop) {
   return (
-    <div>
+    <div><Paper
+    elevation={5}
+    sx={{
+      backgroundImage: `url(${background})`,
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+     
+      minHeight: 800,
+      alignContent: "center",
+    }}
+  >
       <Typography
         variant="h2"
         component="h1"
@@ -33,7 +45,7 @@ export default function Favorite({ favCountries }: Prop) {
             </Typography>
           </Box>
         );
-      })}
+      })}</Paper>
     </div>
   );
 }
