@@ -1,5 +1,5 @@
 import React from "react";
-import { CountryListType } from "../../types/types";
+import { CountryListType } from "../types/types";
 import { Box, Typography } from "@mui/material";
 
 type Prop = {

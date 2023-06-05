@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {CountryListType } from '../../types/types'
+import {CountryListType } from '../types/types'
 
 type Prop = {
   setCountries: React.Dispatch<CountryListType[]>

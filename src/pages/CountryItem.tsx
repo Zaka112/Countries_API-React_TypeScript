@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { CountryListType } from "../../types/types";
+import { CountryListType } from "../types/types";
 import { Typography, TextField, IconButton, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
 import { red } from "@mui/material/colors";

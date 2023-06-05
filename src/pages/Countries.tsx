@@ -2,7 +2,7 @@ import React from "react";
 
 import { CircularProgress } from "@mui/material";
 //import Search from "../../components/country/Search";
-import { CountryListType } from "../../types/types";
+import { CountryListType } from "../types/types";
 //import CountryList from "./CountryList";
 import CountryItem from "./CountryItem";
 

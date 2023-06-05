@@ -4,10 +4,10 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
-import Countries from "./pages/country/Countries";
+import Countries from "./pages/Countries";
 import { CountryListType } from "./types/types";
-import Favorite from "./pages/country/Favorite";
-import CountryDetails from "./pages/country/CountryDetail";
+import Favorite from "./pages/Favorite";
+import CountryDetails from "./pages/CountryDetail";
 
 const countriesURL = "https://restcountries.com/v3.1/all";
 function App() {
