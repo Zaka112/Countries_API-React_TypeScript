@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { CircularProgress } from "@mui/material";
-//import Search from "../../components/country/Search";
-import { CountryListType } from "../types/types";
-//import CountryList from "./CountryList";
+
+import { CountryListType } from "../../types/types";
 import CountryItem from "./CountryItem";
+import Search from "../../components/countrySearch/Search";
 
 type Prop = {
   setCountries: React.Dispatch<CountryListType[]>;
@@ -19,8 +19,13 @@ export default function Countries({
   countries,
   favCountries,
   setFavCountries,
- // setCountries,
 }: Prop) {
+  const [search, setSearch] = useState<string>("");
+  const filteredCountryList = countries.filter((country) => {
+    return !search
+      ? countries
+      : country.name.common.toLowerCase().includes(search.toLowerCase());
+  });
   if (isLoading) {
     return (
       <div>
@@ -30,15 +35,12 @@ export default function Countries({
   } else
     return (
       <div>
+        <Search  setSearch={setSearch} />
         <CountryItem
-          countries={countries}
           favCountries={favCountries}
           setFavCountries={setFavCountries}
+          filteredCountryList={filteredCountryList}
         />
-        {/* <Search countries={countries}  /> */}
-        {/* {countries.map((country)=> {
-            return <CountryItem countries={countries} key={country.name.common} />
-          })} */}
       </div>
     );
 }

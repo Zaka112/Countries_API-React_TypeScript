@@ -1,14 +1,16 @@
 import React from "react";
 
-import { Paper, Box } from "@mui/material";
-import bg from "../assets/world.jpg";
+import { Paper } from "@mui/material";
+
+import background from "../assets/world.jpg";
+
 export default function Home() {
   return (
     <div>
       <Paper
         elevation={5}
         sx={{
-          backgroundImage: `url(${bg})`,
+          backgroundImage: `url(${background})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material/";
 import PublicIcon from "@mui/icons-material/Public";
 import HomeIcon from "@mui/icons-material/Home";
-import { CountryListType } from "../types/types";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+
+import { CountryListType } from "../types/types";
+
 
 type Prop = {
   favCountries: CountryListType[];
@@ -21,7 +23,6 @@ export default function NavBar({ favCountries }: Prop) {
           <Typography variant="h6" component="div">
             World
           </Typography>
-
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Link to="/" style={{ textDecoration: "none", color: "white" }}>
@@ -33,7 +34,6 @@ export default function NavBar({ favCountries }: Prop) {
                 <HomeIcon />
               </IconButton>
             </Link>
-
             <Link
               to="/country/countries"
               style={{ textDecoration: "none", color: "white" }}
@@ -46,7 +46,6 @@ export default function NavBar({ favCountries }: Prop) {
                 <PublicIcon />
               </IconButton>
             </Link>
-
             <Link
               to="/favorite"
               style={{ textDecoration: "none", color: "white" }}
@@ -67,5 +66,3 @@ export default function NavBar({ favCountries }: Prop) {
     </Box>
   );
 }
-
-
