@@ -13,7 +13,7 @@ const countriesURL = "https://restcountries.com/v3.1/all";
 function App() {
   const [countries, setCountries] = useState<CountryListType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [search, setSearch] = useState<string[]>([]);
+  //const [search, setSearch] = useState<string[]>([]);
   const [favCountries, setfavCountries] = useState<CountryListType[]>([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
       })
       .catch((error) => error);
   }, []);
-  const country = countries.map((country) => country.name.common);
+ 
   return (
     <div className="App">
       <NavBar favCountries={favCountries} />
