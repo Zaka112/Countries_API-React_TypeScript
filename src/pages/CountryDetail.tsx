@@ -68,7 +68,7 @@ export default function CountryDetails() {
             />
 
             <CardActions disableSpacing>
-            <a href={countryItem.maps.googleMaps} target="_blank"> <IconButton>
+            <a href={countryItem.maps.googleMaps} target="_blank" rel="noreferrer"> <IconButton>
                 <AddLocationIcon />
               </IconButton></a>
               <ExpandMore
