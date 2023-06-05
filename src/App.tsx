@@ -10,7 +10,6 @@ import { CountryListType } from "./types/types";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import CountryDetails from "./pages/countryPages/CountryDetail";
-import red from "@mui/material/colors/red";
 
 const countriesURL = "https://restcountries.com/v3.1/all";
 
