@@ -36,7 +36,7 @@ function App() {
         setCountries(result);
       })
       .catch((error) => error);
-  }, [countriesURL]);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
