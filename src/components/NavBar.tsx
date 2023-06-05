@@ -68,24 +68,4 @@ export default function NavBar({ favCountries }: Prop) {
   );
 }
 
-{
-  /* <Box sx={{display:'flex', justifyContent:'space-between'}}>
-    <Link to="/">
-      
-     
-    </Link>
-    <Link to="/">
-      <div><HomeIcon/></div>
-    </Link>
-    <Link to="/country/countries">
-      <div><PublicIcon/></div>
-    </Link>
-    <Link to="/favorite">
-      <Badge badgeContent={favCount} color="primary">
-        <div>FAVORITE</div>
-      </Badge>
-    </Link>
-    <Link to="/contact">
-      <div>CONTACT</div>
-    </Link></Box> */
-}
+
