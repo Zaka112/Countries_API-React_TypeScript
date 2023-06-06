@@ -58,11 +58,12 @@ function App() {
           ></Route>
           <Route
             path="/favorite"
-            element={<Favorite favCountries={favCountries} />}
+            element={<Favorite favCountries={favCountries} 
+            setFavCountries={setfavCountries}  />}
           />
           <Route
             path="/country/countrydetails/:name"
-            element={<CountryDetails />}
+            element={<CountryDetails  />}
           />
         </Routes>
       </div>

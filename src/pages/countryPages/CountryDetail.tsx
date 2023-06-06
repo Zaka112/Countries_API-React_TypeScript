@@ -35,10 +35,11 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
+
 export default function CountryDetails() {
 
   const { name } = useParams<{ name: string }>();
-  const countryDetailURL = `https://restcountries.com/v3.1/name/${name}`;
+  const countryDetailURL = `https://restcountries.com/v3.1/name/${name}?fullText=true`;
 
   const [country, setCountry] = useState<CountryListType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -56,6 +57,7 @@ export default function CountryDetails() {
       })
       .catch((error) => console.log(error));
   }, [countryDetailURL]);
+  
   if (isLoading) {
     return (
       <div>

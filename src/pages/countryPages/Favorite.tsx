@@ -1,28 +1,40 @@
 import React from "react";
 
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, IconButton, Paper, Typography } from "@mui/material";
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 import { CountryListType } from "../../types/types";
-import background from "../../assets/world.jpg"
+import background from "../../assets/world.jpg";
 
 type Prop = {
   favCountries: CountryListType[];
+  setFavCountries: React.Dispatch<React.SetStateAction<CountryListType[]>>
 };
 
-export default function Favorite({ favCountries }: Prop) {
+export default function Favorite({ favCountries, setFavCountries }: Prop) {
+  function dealFavCountry(newItem: CountryListType) {
+    if (favCountries.includes(newItem)) {
+      const result = favCountries.filter(
+        (item) => item.name.common !== newItem.name.common
+      );
+      setFavCountries(result);
+    } else {
+      setFavCountries([...favCountries, newItem]);
+    }
+  }
   return (
-    <div><Paper
-    elevation={5}
-    sx={{
-      backgroundImage: `url(${background})`,
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-     
-      minHeight: 800,
-      alignContent: "center",
-    }}
-  >
+    <Paper
+      elevation={5}
+      sx={{
+        backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+
+        minHeight: 800,
+        alignContent: "center",
+      }}
+    >
       <Typography
         variant="h2"
         component="h1"
@@ -32,7 +44,10 @@ export default function Favorite({ favCountries }: Prop) {
       </Typography>
       {favCountries.map((favItem) => {
         return (
-          <Box key={favItem.name.common} sx={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+          <Box
+            key={favItem.name.common}
+            sx={{ display: "flex", justifyContent: "center", gap: "1rem" }}
+          >
             <Typography variant="h3" component="h1">
               {favItem.name.common}
             </Typography>
@@ -43,9 +58,10 @@ export default function Favorite({ favCountries }: Prop) {
                 width={100}
               />
             </Typography>
+            <IconButton onClick={() => dealFavCountry(favItem)}><RemoveCircleOutlineIcon/></IconButton>
           </Box>
         );
-      })}</Paper>
-    </div>
+      })}
+    </Paper>
   );
 }

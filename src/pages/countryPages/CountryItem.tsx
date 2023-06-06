@@ -6,7 +6,8 @@ import TablePaginationActions from "@mui/material/TablePagination/TablePaginatio
 import TableHeading from "../../components/countryTableComponents/TableHeading";
 import TablesBody from "../../components/countryTableComponents/TablesBody";
 import { CountryListType } from "../../types/types";
-import background from "../../assets/world.jpg"
+import background from "../../assets/world.jpg";
+import { toast } from "react-toastify";
 
 type Prop = {
   favCountries: CountryListType[];
@@ -27,8 +28,10 @@ export default function CountryItem({
         (item) => item.name.common !== newItem.name.common
       );
       setFavCountries(result);
+      
     } else {
       setFavCountries([...favCountries, newItem]);
+      toast("Added to favorite!");
     }
   }
   const handleChangePage = (event: unknown, newPage: number) => {
@@ -43,7 +46,14 @@ export default function CountryItem({
   };
 
   return (
-    <Paper sx={{ width: "100%", overflow: "hidden",  backgroundImage: `url(${background})` }}>
+    <Paper
+      sx={{
+        width: "100%",
+        overflow: "hidden",
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+      }}
+    >
       <TableContainer>
         <Table>
           <TableHeading />
