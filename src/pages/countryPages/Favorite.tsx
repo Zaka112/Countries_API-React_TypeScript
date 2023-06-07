@@ -1,14 +1,20 @@
 import React from "react";
 
-import { Box, IconButton, Paper, Typography } from "@mui/material";
-import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import {
+  Box,
+  IconButton,
+  Paper,
+  Typography,
+  dividerClasses,
+} from "@mui/material";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 import { CountryListType } from "../../types/types";
 import background from "../../assets/world.jpg";
 
 type Prop = {
   favCountries: CountryListType[];
-  setFavCountries: React.Dispatch<React.SetStateAction<CountryListType[]>>
+  setFavCountries: React.Dispatch<React.SetStateAction<CountryListType[]>>;
 };
 
 export default function Favorite({ favCountries, setFavCountries }: Prop) {
@@ -42,26 +48,38 @@ export default function Favorite({ favCountries, setFavCountries }: Prop) {
       >
         Favorite Countries
       </Typography>
-      {favCountries.map((favItem) => {
-        return (
-          <Box
-            key={favItem.name.common}
-            sx={{ display: "flex", justifyContent: "center", gap: "1rem" }}
-          >
-            <Typography variant="h3" component="h1">
-              {favItem.name.common}
-            </Typography>
-            <Typography>
-              <img
-                src={favItem.flags.svg}
-                alt={favItem.flags.alt}
-                width={100}
-              />
-            </Typography>
-            <IconButton onClick={() => dealFavCountry(favItem)}><RemoveCircleOutlineIcon/></IconButton>
-          </Box>
-        );
-      })}
+
+      {favCountries.length > 0 ? (
+        favCountries.map((favItem) => {
+          return (
+            <Box
+              key={favItem.name.common}
+              sx={{ display: "flex", justifyContent: "center", gap: "1rem", }}
+            >
+              <Typography variant="h3" component="h1">
+                {favItem.name.common}
+              </Typography>
+              <Typography>
+                <img
+                  src={favItem.flags.svg}
+                  alt={favItem.flags.alt}
+                  width={100}
+                />
+              </Typography>
+              <Typography variant="h3" component="h1">
+               Show Description here
+              </Typography>
+              <IconButton onClick={() => dealFavCountry(favItem)}>
+                <RemoveCircleOutlineIcon />
+              </IconButton>
+            </Box>
+          );
+        })
+      ) : (
+        <Typography sx={{ textAlign: "center", fontWeight: 800, color: "red" }}>
+          No country has been added to favorite.
+        </Typography>
+      )}
     </Paper>
   );
 }
