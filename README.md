@@ -33,7 +33,7 @@ ONLY DO THIS PART WHEN YOU HAVE COMPLETED THE REQUIREMENTS PART
 
 1. When the user add country to favorite list, the website should show a message: `A country is added to the favorite list`
 2. Sorting by country name
-3. Deploy the project
+3. Deploy the project: https://peaceful-genie-17e20b.netlify.app/
 
 ### Useful sources
 
