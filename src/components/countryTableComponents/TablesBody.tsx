@@ -15,6 +15,7 @@ import { v4 as uuidv4 } from "uuid";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { CountryListType } from "../../types/types";
+import { ToastContainer, toast } from "react-toastify";
 
 type Prop = {
   filteredCountryList: CountryListType[];
@@ -24,6 +25,7 @@ type Prop = {
   setFavCountries: React.Dispatch<CountryListType[]>;
   dealFavCountry(newItem: CountryListType): void;
 };
+
 export default function TablesBody({
   filteredCountryList,
   page,
@@ -67,10 +69,12 @@ export default function TablesBody({
                     ) : (
                       <div>
                         <FavoriteIcon sx={{ color: red[700] }} />
-                        <Alert severity="success">
+                       
+
+                        {/* <Alert severity="success">
                           {countryItem.name.common} is added to the favorite
                           list!
-                        </Alert>
+                        </Alert> */}
                       </div>
                     )}
                   </IconButton>

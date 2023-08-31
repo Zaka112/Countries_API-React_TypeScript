@@ -31,7 +31,7 @@ export default function CountryItem({
       
     } else {
       setFavCountries([...favCountries, newItem]);
-      toast("Added to favorite!");
+      
     }
   }
   const handleChangePage = (event: unknown, newPage: number) => {
