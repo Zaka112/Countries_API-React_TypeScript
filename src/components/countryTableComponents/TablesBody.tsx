@@ -6,8 +6,7 @@ import {
   TableCell,
   CardActions,
   IconButton,
-  Alert,
-} from "@mui/material";
+ } from "@mui/material";
 import { red } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
@@ -15,7 +14,7 @@ import { v4 as uuidv4 } from "uuid";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { CountryListType } from "../../types/types";
-import { ToastContainer, toast } from "react-toastify";
+
 
 type Prop = {
   filteredCountryList: CountryListType[];

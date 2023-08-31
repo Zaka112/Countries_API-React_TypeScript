@@ -5,8 +5,7 @@ import {
   IconButton,
   Paper,
   Typography,
-  dividerClasses,
-} from "@mui/material";
+ } from "@mui/material";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 import { CountryListType } from "../../types/types";
