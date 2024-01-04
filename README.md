@@ -1,4 +1,4 @@
-# React assignment
+# React Countries API (TypeScript)
 
 This assignment is to practice TypeScript
 
@@ -18,22 +18,14 @@ This assignment is to practice TypeScript
 7. When the user add a country to Favorite the favorite icon should change the color.
 8. Have a Loading page while fetching data
 
-### Code style Requirements
+### Code style 
 
 1. Naming convention
 2. Clear file structure
 3. Divided the project to small components
-4. Clean code: no console.log, no dead code,
-5. Format code (Prettier - Code formatter)
-6. Separate import from your own file and the import from the package
-
-### Extra requirements
-
-ONLY DO THIS PART WHEN YOU HAVE COMPLETED THE REQUIREMENTS PART
-
-1. When the user add country to favorite list, the website should show a message: `A country is added to the favorite list`
-2. Sorting by country name
-3. Deploy the project: https://peaceful-genie-17e20b.netlify.app/
+4. When the user add country to favorite list, the website should show a message: `A country is added to the favorite list`
+5. Sorting by country name 
+6. Deploy link: https://countries-api-17e20b.netlify.app/
 
 ### Useful sources
 
