@@ -24,7 +24,7 @@ export default function NavBar({ favCountries }: Prop) {
             World
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ display: {  md: "flex" } }}>
             <Link to="/" style={{ textDecoration: "none", color: "white" }}>
               <IconButton
                 size="large"
