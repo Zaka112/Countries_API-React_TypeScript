@@ -43,7 +43,7 @@ function App() {
       <div className="App">
         <NavBar favCountries={favCountries} />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home  countries={countries} />}></Route>
           <Route
             path="/country/countries"
             element={

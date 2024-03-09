@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { CircularProgress } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 
 import { CountryListType } from "../../types/types";
 import CountryItem from "./CountryItem";
@@ -34,13 +34,14 @@ export default function Countries({
     );
   } else
     return (
-      <div>
+      <Box sx={{ flexGrow: 1 }}>
+         <Box sx={{ display: {  md: "flex", flexDirection:"column" } }}>
         <Search  setSearch={setSearch} />
         <CountryItem
           favCountries={favCountries}
           setFavCountries={setFavCountries}
           filteredCountryList={filteredCountryList}
         />
-      </div>
+      </Box></Box>
     );
 }
